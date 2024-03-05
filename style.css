@@ -1,0 +1,547 @@
+body {
+  background: #2eb5e5;
+}
+
+/* Sun */
+#sun {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: rgb(254, 255, 226);
+  box-shadow: 0px 0px 40px 15px white;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* Rays */
+.ray_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+}
+
+.ray {
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: absolute;
+  opacity: 0.1;
+}
+
+.ray4 {
+  height: 120px;
+  width: 14px;
+  rotate: 305deg;
+  top: 30px;
+  left: 100px;
+}
+
+.ray5 {
+  height: 140px;
+  width: 30px;
+  rotate: -15deg;
+  top: 60px;
+  left: 40px;
+}
+
+.ray6 {
+  height: 90px;
+  width: 50px;
+  rotate: 30deg;
+  top: 60px;
+  left: -40px;
+}
+
+.ray7 {
+  height: 180px;
+  width: 10px;
+  rotate: 70deg;
+  top: -35px;
+  left: -40px;
+}
+
+.ray8 {
+  height: 120px;
+  width: 30px;
+  rotate: 100deg;
+  top: -45px;
+  left: -90px;
+}
+
+.ray9 {
+  height: 80px;
+  width: 10px;
+  rotate: 120deg;
+  top: -65px;
+  left: -60px;
+}
+
+.ray10 {
+  height: 190px;
+  width: 23px;
+  rotate: 150deg;
+  top: -185px;
+  left: -60px;
+}
+
+/* Clouds */
+.cloud1 {
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  margin-top: 100px;
+  position: relative;
+  width: 330px;
+  animation: cloud1 4s linear infinite alternate;
+}
+
+.cloud1:after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+  height: 80px;
+  left: 50px;
+  top: -50px;
+  width: 80px;
+}
+
+.cloud1:before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 200px;
+  width: 160px;
+  height: 160px;
+  right: 50px;
+  top: -90px;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 100px;
+  }
+
+  100% {
+    left: 200px;
+  }
+}
+
+.cloud2 {
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  margin-top: 100px;
+  margin-left: 250px;
+  position: relative;
+  width: 300px;
+  animation: cloud2 5s linear infinite alternate;
+}
+
+.cloud2:after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+  height: 80px;
+  left: 50px;
+  top: -50px;
+  width: 80px;
+}
+
+.cloud2:before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 200px;
+  width: 160px;
+  height: 160px;
+  right: 50px;
+  top: -90px;
+}
+
+@keyframes cloud2 {
+  0% {
+    right: 0;
+  }
+
+  50% {
+    right: 100px;
+  }
+
+  100% {
+    right: 200px;
+  }
+}
+
+.cloud3 {
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  margin-top: -250px;
+  margin-left: 500px;
+  position: relative;
+  width: 330px;
+  animation: cloud3 6s linear infinite alternate;
+}
+
+.cloud3:after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+  height: 80px;
+  left: 50px;
+  top: -50px;
+  width: 80px;
+}
+
+.cloud3:before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  border-radius: 200px;
+  width: 160px;
+  height: 160px;
+  right: 50px;
+  top: -90px;
+}
+
+@keyframes cloud3 {
+  0% {
+    right: 0;
+  }
+
+  50% {
+    right: 100px;
+  }
+
+  100% {
+    right: 200px;
+  }
+}
+
+/* Waves */
+section {
+  overflow: hidden;
+}
+
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://i.postimg.cc/kGMT715s/Wave.png);
+  background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section .wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+section .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section .wave.wave4 {
+  animation: animate2 6s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: 0s;
+  bottom: 20px;
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+/* PLay button */
+#play {
+  background: transparent;
+  border: transparent;
+  color: rgb(254, 255, 226);
+  font-size: xx-large;
+}
+
+/* Birds */
+.bird {
+  position: absolute;
+  left: 1000px;
+  bottom: 370px;
+  display: block;
+  animation-delay: 0.4s;
+  transition: transform 250ms;
+}
+
+.bird:hover {
+  transform: translateX(-20px);
+}
+
+.bird.second {
+  left: 1100px;
+  bottom: 355px;
+  animation-delay: 0s;
+  animation: birdFly 3.5s ease infinite;
+}
+
+.bird.third {
+  left: 970px;
+  bottom: 460px;
+  animation-delay: 1s;
+}
+
+.bird.third:hover {
+  transform: translateY(-20px);
+}
+
+.bird.fourth {
+  left: 1100px;
+  bottom: 480px;
+  animation-delay: 1s;
+}
+
+.bird.fourth:hover {
+  transform: translateY(20px);
+}
+
+@keyframes birdFly {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.left-wing {
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  transform-origin: right bottom;
+  animation: wingLeft 0.4s ease infinite;
+}
+
+.left-wing span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  transform: translate(4px, 12px);
+}
+
+@keyframes wingLeft {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.right-wing {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  transform-origin: left bottom;
+  animation: wingRight 0.4s ease infinite;
+}
+
+.right-wing span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  transform: translate(-4px, 12px);
+}
+
+@keyframes wingRight {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* Ship */
+.ship {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  z-index: 8;
+  width: 86px;
+  height: 34px;
+  transform-origin: center center;
+  animation: ship 5s ease infinite;
+}
+
+@keyframes ship {
+  0% {
+    transform: translateY(-21px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(-21px);
+  }
+}
+
+.ship span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 86px;
+  height: 34px;
+  margin-left: 650px;
+  margin-bottom: 80px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 20px;
+  background-color: #583333;
+}
+
+.ship span:nth-child(1) {
+  left: 30px;
+  bottom: 34px;
+  width: 4px;
+  height: 92px;
+  border: none;
+  border-radius: 0;
+  background-color: #030308;
+}
+
+.ship span:nth-child(2) {
+  left: 21px;
+  bottom: 57px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 72px solid whitesmoke;
+  border-left: 22px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(-16.5deg);
+  border-bottom-right-radius: 5px;
+}
+
+.ship span:nth-child(3) {
+  left: -1px;
+  bottom: 60px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 68px solid whitesmoke;
+  border-left: 31px solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom-left-radius: 5px;
+}
